@@ -8,50 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 240 5.9% 10%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 262 100% 75%;
+    /* Google Forms Purple */
+    --primary: 261 73% 60%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Microsoft Forms Green */
+    --secondary: 142 69% 58%;
+    --secondary-foreground: 0 0% 100%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 45%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 84% 4.9%;
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 261 73% 60%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 262 83% 58%;
-
-    /* Data visualization colors */
-    --chart-1: 262 83% 58%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    /* Data visualization colors - Purple and Green theme */
+    --chart-1: 261 73% 60%;  /* Google Forms Purple */
+    --chart-2: 142 69% 58%;  /* Microsoft Forms Green */
+    --chart-3: 280 87% 65%;  /* Light Purple */
+    --chart-4: 160 84% 39%;  /* Dark Green */
+    --chart-5: 245 58% 51%;  /* Blue Purple */
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 100% 75%));
-    --gradient-surface: linear-gradient(145deg, hsl(240 5.9% 10%), hsl(240 4.8% 15%));
-    --gradient-card: linear-gradient(145deg, hsl(240 10% 3.9%) 0%, hsl(240 5.9% 10%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(261 73% 60%), hsl(280 87% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(142 69% 58%), hsl(160 84% 39%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
 
     /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(262 83% 58% / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(240 10% 3.9% / 0.3);
+    --shadow-elegant: 0 10px 25px -5px hsl(261 73% 60% / 0.15);
+    --shadow-card: 0 2px 10px -2px hsl(0 0% 0% / 0.1);
+    --shadow-green: 0 10px 25px -5px hsl(142 69% 58% / 0.15);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -75,33 +77,6 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  }
-
-  /* Custom utility classes */
-  .gradient-primary {
-    background: var(--gradient-primary);
-  }
-  
-  .gradient-surface {
-    background: var(--gradient-surface);
-  }
-  
-  .gradient-card {
-    background: var(--gradient-card);
-  }
-  
-  .shadow-elegant {
-    box-shadow: var(--shadow-elegant);
-  }
-  
-  .shadow-card {
-    box-shadow: var(--shadow-card);
-  }
-  
-  .transition-smooth {
-    transition: var(--transition-smooth);
-  }
-
 @layer base {
   * {
     @apply border-border;
@@ -110,4 +85,33 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom utility classes */
+.gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.gradient-secondary {
+  background: var(--gradient-secondary);
+}
+
+.gradient-card {
+  background: var(--gradient-card);
+}
+
+.shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-green {
+  box-shadow: var(--shadow-green);
+}
+
+.transition-smooth {
+  transition: var(--transition-smooth);
 }
